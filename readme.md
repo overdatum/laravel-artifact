@@ -138,12 +138,15 @@ class User_Edit_Form extends Form {
 }
 ``` 
 
-I will add some better examples soone
+I will add some better examples soon
 
 
 # Who
 
 Koen Schmeets	- Artifact
+
 Layla Team		- Motivation
+
 ShawnMcCool		- Form Base Model
+
 Phill Sparks	- Bootsparks
