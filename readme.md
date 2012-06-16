@@ -38,17 +38,17 @@ When you load your Artifact, It will render all calls that were catched and retu
 
 To use Artifact in your own project. simply install it by running the following command on your terminal
 
-´php artisan bundle:install artifact´
+`php artisan bundle:install artifact`
 
 After that, move the config file to your application/config folder.
 
-´mv bundles/artifact/artifact.php application/config´
+`mv bundles/artifact/artifact.php application/config`
 
 Now, all we have left to do for installation is starting the bundle in application/bundles.php
 
 Make add this line to the array
 
-´'artifact' => array('auto' => true)´
+`'artifact' => array('auto' => true)`
 
 ### Now let's use it!
 
@@ -59,7 +59,7 @@ We can register an Artifact with a certain name, and a certain type.
 You are totally free in how you name your things, let me just give you an example
 
 application/start.php
-´´´php
+```php
 //<?php
 
 use Layla\Artifact;
@@ -71,7 +71,7 @@ Event::listen('laravel.started: artifact', function()
 	Artifact::register('form', 'user.edit', 'user.edit@form');
 	Artifact::register('table', 'user.add', 'mybundle::user.add@table');
 });
-´´´
+```
 
 Here we specified 3 different "types". A page, form and a table.
 
@@ -87,7 +87,7 @@ As you can see the type will be pluralized and added to the file path. classname
 
 To render our artifacts, we can simple call the Artifact class statically with the "type" as the method, and the "name" as the first argument. You can add as many arguments as you like, that will be passed on to the Artifact.
 
-´´´php
+```php
 //<?php
 
 use Layla\Artifact;
@@ -108,11 +108,11 @@ Route::get('table', function()
 {
 	return Artifact::table('user.add');
 });
-´´´
+```
 
 And here is the "form" "user.edit" that extends from ShawnMcCool's form-base-model
 
-´´´
+```
 <?php
 
 use Layla\Form;
@@ -133,7 +133,7 @@ class User_Edit_Form extends Form {
 	}
 
 }
-´´´ 
+``` 
 
 I will add some better examples soone
 
