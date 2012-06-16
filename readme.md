@@ -61,17 +61,17 @@ You are totally free in how you name your things, let me just give you an exampl
 application/start.php
 
 ```php
-	//<?php
+//<?php
 
-	use Layla\Artifact;
+use Layla\Artifact;
 
-	// Let's wait for the Artifact bundle to have loaded, before registering our defenitions
-	Event::listen('laravel.started: artifact', function()
-	{
-		Artifact::register('page', 'user.add', 'user.add@page');
-		Artifact::register('form', 'user.edit', 'user.edit@form');
-		Artifact::register('table', 'user.add', 'mybundle::user.add@table');
-	});
+// Let's wait for the Artifact bundle to have loaded, before registering our defenitions
+Event::listen('laravel.started: artifact', function()
+{
+	Artifact::register('page', 'user.add', 'user.add@page');
+	Artifact::register('form', 'user.edit', 'user.edit@form');
+	Artifact::register('table', 'user.add', 'mybundle::user.add@table');
+});
 ```
 
 Here we specified 3 different "types". A page, form and a table.
