@@ -88,8 +88,9 @@ As you can see the type will be pluralized and added to the file path. classname
 
 To render our artifacts, we can simple call the Artifact class statically with the "type" as the method, and the "name" as the first argument. You can add as many arguments as you like, that will be passed on to the Artifact.
 
+
 ```php
-<?php
+//<?php
 
 use Layla\Artifact;
 
@@ -113,7 +114,8 @@ Route::get('table', function()
 
 And here is the "form" "user.edit" that extends from ShawnMcCool's form-base-model
 
-```
+
+```php
 <?php
 
 use Layla\Form;
